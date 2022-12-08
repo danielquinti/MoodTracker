@@ -19,15 +19,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-Ek-Prz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x79-gj-rsJ" userLabel="Left Column">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="818"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x79-gj-rsJ" userLabel="Left Column">
+                                        <rect key="frame" x="0.0" y="0.0" width="369.5" height="818"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BXS-Vj-zGp" userLabel="Right Column">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="818"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BXS-Vj-zGp" userLabel="Right Column">
+                                        <rect key="frame" x="369.5" y="0.0" width="44.5" height="818"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="x79-gj-rsJ" secondAttribute="bottom" id="P0i-VD-dQn"/>
+                                    <constraint firstAttribute="bottom" secondItem="BXS-Vj-zGp" secondAttribute="bottom" id="wbV-L4-EZG"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,6 +41,10 @@
                             <constraint firstItem="oZj-Ek-Prz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lID-N8-e4B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftColumn" destination="x79-gj-rsJ" id="6nG-vo-dbx"/>
+                        <outlet property="rightColumn" destination="BXS-Vj-zGp" id="EZY-WY-2lj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,12 +54,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

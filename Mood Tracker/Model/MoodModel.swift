@@ -27,13 +27,13 @@ struct ThirdLevelFeeling: Decodable {
     var details: [String]
 }
 
-func loadJson() -> [MoodModel]? {
+func loadJson() -> MoodModel? {
     if let url = Bundle.main.url(forResource: "feelings", withExtension: "json") {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let jsonData = try decoder.decode(MoodModel.self, from: data)
-            print(jsonData)
+            return jsonData
         } catch {
             print("error:\(error)")
         }
