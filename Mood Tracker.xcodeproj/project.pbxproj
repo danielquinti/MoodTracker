@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE85CA4729420B3600126BA8 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE85CA4629420B3600126BA8 /* MoodModel.swift */; };
+		EE9D712F29415A4F007B1C01 /* feelings.json in Resources */ = {isa = PBXBuildFile; fileRef = EE9D712E29415A4F007B1C01 /* feelings.json */; };
 		EED627D5293BC2280037D00A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED627D4293BC2280037D00A /* AppDelegate.swift */; };
 		EED627D7293BC2280037D00A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED627D6293BC2280037D00A /* SceneDelegate.swift */; };
 		EED627D9293BC2280037D00A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED627D8293BC2280037D00A /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE85CA4629420B3600126BA8 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
+		EE9D712E29415A4F007B1C01 /* feelings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feelings.json; sourceTree = "<group>"; };
 		EED627D1293BC2280037D00A /* Mood Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mood Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED627D4293BC2280037D00A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EED627D6293BC2280037D00A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE85CA41294206D900126BA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D712E29415A4F007B1C01 /* feelings.json */,
+				EE85CA4629420B3600126BA8 /* MoodModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE85CA42294206E200126BA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EED627E2293BC22A0037D00A /* LaunchScreen.storyboard */,
+				EED627DA293BC2280037D00A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE85CA43294206F600126BA8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EED627D8293BC2280037D00A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE85CA442942071100126BA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EED627D6293BC2280037D00A /* SceneDelegate.swift */,
+				EED627D4293BC2280037D00A /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EED627C8293BC2280037D00A = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +97,11 @@
 		EED627D3293BC2280037D00A /* Mood Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				EED627D4293BC2280037D00A /* AppDelegate.swift */,
-				EED627D6293BC2280037D00A /* SceneDelegate.swift */,
-				EED627D8293BC2280037D00A /* ViewController.swift */,
-				EED627DA293BC2280037D00A /* Main.storyboard */,
+				EE85CA42294206E200126BA8 /* View */,
+				EE85CA41294206D900126BA8 /* Model */,
+				EE85CA43294206F600126BA8 /* Controller */,
+				EE85CA442942071100126BA8 /* Supporting Files */,
 				EED627E0293BC22A0037D00A /* Assets.xcassets */,
-				EED627E2293BC22A0037D00A /* LaunchScreen.storyboard */,
 				EED627E5293BC22A0037D00A /* Info.plist */,
 				EED627DD293BC2280037D00A /* Mood_Tracker.xcdatamodeld */,
 			);
@@ -129,6 +167,7 @@
 			files = (
 				EED627E4293BC22A0037D00A /* LaunchScreen.storyboard in Resources */,
 				EED627E1293BC22A0037D00A /* Assets.xcassets in Resources */,
+				EE9D712F29415A4F007B1C01 /* feelings.json in Resources */,
 				EED627DC293BC2280037D00A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE85CA4729420B3600126BA8 /* MoodModel.swift in Sources */,
 				EED627D9293BC2280037D00A /* ViewController.swift in Sources */,
 				EED627D5293BC2280037D00A /* AppDelegate.swift in Sources */,
 				EED627D7293BC2280037D00A /* SceneDelegate.swift in Sources */,
