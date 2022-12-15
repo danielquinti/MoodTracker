@@ -12,39 +12,33 @@ class TopLevelViewController: UIViewController {
     @IBOutlet weak var leftColumn: UIStackView!
     @IBOutlet weak var rightColumn: UIStackView!
     
+    var moodModelManager = MoodModelManager()
     var topLevelFeeling : String?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let data=loadJson()!
-        for category in data.feelings{
-            if category.name == "uncomfortable"{
-            for feeling in category.details{
+    
+    func column(comfort:Bool,color:UIColor){
+        if let safeFeelings = moodModelManager.getSecondLevelFeelings(comfort: comfort){
+            for feeling in safeFeelings{
                 let button = UIButton()
                 button.setTitle(feeling.name, for: .normal)
                 button.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-                button.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+                button.backgroundColor = color
                 button.addTarget(self, action: #selector(self.onFeelingClicked), for: .touchUpInside)
-                leftColumn.addArrangedSubview(button)
-            }
-            }
-            else{
-                for feeling in category.details{
-                    let button = UIButton()
-                    button.setTitle(feeling.name, for: .normal)
-                    button.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-                    button.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
-                    button.addTarget(self, action: #selector(self.onFeelingClicked), for: .touchUpInside)
-
-                    rightColumn.addArrangedSubview(button)
-                }
+                if comfort{rightColumn.addArrangedSubview(button)}
+                else{leftColumn.addArrangedSubview(button)}
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        column(comfort: false, color: #colorLiteral(red: 0.5799757838, green: 0.07781272382, blue: 0.08502667397, alpha: 1))
+        column(comfort: true, color: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "secondLevel"{
             let destination = segue.destination as! SecondLevelViewController
+            destination.moodModelManager = self.moodModelManager
             destination.keyword = self.topLevelFeeling
         }
     }

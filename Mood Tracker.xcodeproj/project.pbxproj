@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE4E494B294BC1F80018688B /* MoodModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4E494A294BC1F80018688B /* MoodModelManager.swift */; };
 		EE85CA4729420B3600126BA8 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE85CA4629420B3600126BA8 /* MoodModel.swift */; };
 		EE9D712F29415A4F007B1C01 /* feelings.json in Resources */ = {isa = PBXBuildFile; fileRef = EE9D712E29415A4F007B1C01 /* feelings.json */; };
 		EED16DA52948CDC600C34B79 /* SecondLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED16DA42948CDC600C34B79 /* SecondLevelViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE4E494A294BC1F80018688B /* MoodModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModelManager.swift; sourceTree = "<group>"; };
 		EE85CA4629420B3600126BA8 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
 		EE9D712E29415A4F007B1C01 /* feelings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feelings.json; sourceTree = "<group>"; };
 		EED16DA42948CDC600C34B79 /* SecondLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLevelViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				EE9D712E29415A4F007B1C01 /* feelings.json */,
 				EE85CA4629420B3600126BA8 /* MoodModel.swift */,
+				EE4E494A294BC1F80018688B /* MoodModelManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4E494B294BC1F80018688B /* MoodModelManager.swift in Sources */,
 				EE85CA4729420B3600126BA8 /* MoodModel.swift in Sources */,
 				EED16DA52948CDC600C34B79 /* SecondLevelViewController.swift in Sources */,
 				EED627D9293BC2280037D00A /* TopLevelViewController.swift in Sources */,
