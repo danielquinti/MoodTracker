@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bms-yX-C6g">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -8,22 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top Level View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mood_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="TopLevelViewController" customModule="Mood_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-Ek-Prz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-Ek-Prz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x79-gj-rsJ" userLabel="Left Column">
-                                        <rect key="frame" x="0.0" y="0.0" width="369.5" height="818"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="x79-gj-rsJ" userLabel="Left Column">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="774"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BXS-Vj-zGp" userLabel="Right Column">
-                                        <rect key="frame" x="369.5" y="0.0" width="44.5" height="818"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BXS-Vj-zGp" userLabel="Right Column">
+                                        <rect key="frame" x="364" y="0.0" width="50" height="774"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -41,14 +42,63 @@
                             <constraint firstItem="oZj-Ek-Prz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lID-N8-e4B"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oLT-Vy-VAl"/>
                     <connections>
                         <outlet property="leftColumn" destination="x79-gj-rsJ" id="6nG-vo-dbx"/>
                         <outlet property="rightColumn" destination="BXS-Vj-zGp" id="EZY-WY-2lj"/>
+                        <segue destination="rgV-CT-rto" kind="presentation" identifier="secondLevel" id="7Go-sm-1Oa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="104"/>
+            <point key="canvasLocation" x="2022" y="125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="08C-Pw-dQe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bms-yX-C6g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HbF-nP-59R">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Zs-Hq-438"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ob6-7Q-vvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="103.79464285714285"/>
+        </scene>
+        <!--Second Level View Controller-->
+        <scene sceneID="VUl-N7-eAg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRH-sy-7FA" sceneMemberID="firstResponder"/>
+                <viewController id="rgV-CT-rto" userLabel="Second Level View Controller" customClass="SecondLevelViewController" customModule="Mood_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q75-1E-wnE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GAZ-lu-7WF" userLabel="Button Column">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YWm-Uw-vdd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GAZ-lu-7WF" firstAttribute="top" secondItem="YWm-Uw-vdd" secondAttribute="top" id="48M-QX-CAo"/>
+                            <constraint firstItem="YWm-Uw-vdd" firstAttribute="trailing" secondItem="GAZ-lu-7WF" secondAttribute="trailing" id="GTY-aH-7JC"/>
+                            <constraint firstItem="GAZ-lu-7WF" firstAttribute="leading" secondItem="YWm-Uw-vdd" secondAttribute="leading" id="qmc-WV-r2b"/>
+                            <constraint firstItem="YWm-Uw-vdd" firstAttribute="bottom" secondItem="GAZ-lu-7WF" secondAttribute="bottom" id="tXK-f5-CgK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U91-mJ-Brt"/>
+                    <connections>
+                        <outlet property="buttonColumn" destination="GAZ-lu-7WF" id="3CD-ke-oAb"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2790" y="104"/>
         </scene>
     </scenes>
     <resources>
