@@ -1,0 +1,4 @@
+Dark mode : two different pallettes
+Core data
+Firebase
+Calendar (plot view)

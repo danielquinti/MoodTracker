@@ -15,6 +15,8 @@ class TopLevelViewController: UIViewController {
     var moodModelManager = MoodModelManager()
     var topLevelFeeling : String?
     
+    
+    
     func column(comfort:Bool,color:UIColor){
         if let safeFeelings = moodModelManager.getSecondLevelFeelings(comfort: comfort){
             for feeling in safeFeelings{

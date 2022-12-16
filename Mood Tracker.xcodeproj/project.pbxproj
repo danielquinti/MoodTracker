@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE4E494B294BC1F80018688B /* MoodModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4E494A294BC1F80018688B /* MoodModelManager.swift */; };
+		EE4E494E294BEB770018688B /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE4E494D294BEB770018688B /* todo.txt */; };
 		EE85CA4729420B3600126BA8 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE85CA4629420B3600126BA8 /* MoodModel.swift */; };
 		EE9D712F29415A4F007B1C01 /* feelings.json in Resources */ = {isa = PBXBuildFile; fileRef = EE9D712E29415A4F007B1C01 /* feelings.json */; };
 		EED16DA52948CDC600C34B79 /* SecondLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED16DA42948CDC600C34B79 /* SecondLevelViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		EE4E494A294BC1F80018688B /* MoodModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModelManager.swift; sourceTree = "<group>"; };
+		EE4E494D294BEB770018688B /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		EE85CA4629420B3600126BA8 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
 		EE9D712E29415A4F007B1C01 /* feelings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feelings.json; sourceTree = "<group>"; };
 		EED16DA42948CDC600C34B79 /* SecondLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLevelViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				EED627E0293BC22A0037D00A /* Assets.xcassets */,
 				EED627E5293BC22A0037D00A /* Info.plist */,
 				EED627DD293BC2280037D00A /* Mood_Tracker.xcdatamodeld */,
+				EE4E494D294BEB770018688B /* todo.txt */,
 			);
 			path = "Mood Tracker";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				EED627E1293BC22A0037D00A /* Assets.xcassets in Resources */,
 				EE9D712F29415A4F007B1C01 /* feelings.json in Resources */,
 				EED627DC293BC2280037D00A /* Main.storyboard in Resources */,
+				EE4E494E294BEB770018688B /* todo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

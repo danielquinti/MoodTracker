@@ -9,14 +9,19 @@ import UIKit
 
 class SecondLevelViewController: UIViewController{
     var keyword: String?
-    var topLevelFeeling: String?
     var moodModelManager: MoodModelManager?
     
     @IBOutlet weak var buttonColumn: UIStackView!
-    @objc func onFeelingClicked(sender: UIButton) {
-        self.topLevelFeeling = sender.currentTitle
-
+    
+    func viewwillappear(){
+        super.viewWillAppear(true)
+        navigationController?.isNavigationBarHidden=false
     }
+    
+    @objc func onFeelingClicked(sender: UIButton){
+        print(keyword,sender.currentTitle)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let safeKeyword = keyword{
